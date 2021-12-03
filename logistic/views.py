@@ -24,7 +24,7 @@ class StockViewSet(ModelViewSet):
     serializer_class = StockSerializer
     # при необходимости добавьте параметры фильтрации
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ['address']
+    filterset_fields = ['address', 'products']
     search_fields = ['address']
     ordering_fields = ['address']
     pagination_class = PageNumberPagination
